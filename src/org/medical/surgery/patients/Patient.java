@@ -1,13 +1,28 @@
 package org.medical.surgery.patients;
 
+import org.medical.surgery.organs.Eye;
+import org.medical.surgery.organs.Heart;
+import org.medical.surgery.organs.Skin;
+import org.medical.surgery.organs.Stomach;
+
 public class Patient {
 
     public String name;
     public int age;
+    private Eye leftEye;
+    private Eye rightEye;
+    private Heart heart;
+    private Stomach stomach;
+    private Skin skin;
 
-    public Patient(String name, int age) {
+    public Patient(String name, int age, Eye leftEye, Eye rightEye, Heart heart, Stomach stomach, Skin skin) {
         this.name = name;
         this.age = age;
+        this.leftEye = leftEye;
+        this.rightEye = rightEye;
+        this.heart = heart;
+        this.stomach = stomach;
+        this.skin = skin;
     }
 
     public String getName() {
@@ -26,11 +41,43 @@ public class Patient {
         this.age = age;
     }
 
-    @Override
-    public String toString() {
-        return "Patient{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                '}';
+    public Eye getLeftEye() {
+        return leftEye;
+    }
+
+    public void setLeftEye(Eye leftEye) {
+        this.leftEye = leftEye;
+    }
+
+    public Eye getRightEye() {
+        return rightEye;
+    }
+
+    public void setRightEye(Eye rightEye) {
+        this.rightEye = rightEye;
+    }
+
+    public Heart getHeart() {
+        return heart;
+    }
+
+    public void setHeart(Heart heart) {
+        this.heart = heart;
+    }
+
+    public Stomach getStomach() {
+        return stomach;
+    }
+
+    public void setStomach(Stomach stomach) {
+        this.stomach = stomach;
+    }
+
+    public Skin getSkin() {
+        return skin;
+    }
+
+    public void setSkin(Skin skin) {
+        this.skin = skin;
     }
 }
